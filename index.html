@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speed Typing Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Speed Typing Game</h1>
+
+  <div class="container">
+    <p class="word" id="word">loading...</p>
+
+    <input type="text" id="text" placeholder="Type the word..." autocomplete="off" />
+
+    <p>⏱ Time Left: <span id="time">12</span>s</p>
+    <p>🏆 Score: <span id="score">0</span></p>
+
+    <label>Difficulty:</label>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+
+    <button id="musicBtn">🎵 Play / Pause Music</button>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
