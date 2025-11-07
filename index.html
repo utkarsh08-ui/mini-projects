@@ -1,33 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Speed Typing Game</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Typing Speed Game</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Speed Typing Game</h1>
+<!-- START SCREEN -->
+<div id="startScreen" class="overlay show">
+  <h1>⚡ Typing Speed Challenge</h1>
+  <button id="startBtn">Start Game</button>
+</div>
 
-  <div class="container">
-    <p class="word" id="word">loading...</p>
+<!-- GAME OVER SCREEN -->
+<div id="gameOverScreen" class="overlay">
+  <h2>⏳ Time Over!</h2>
+  <p>Your Score: <span id="finalScore"></span></p>
+  <button id="restartBtn">Play Again</button>
+</div>
 
-    <input type="text" id="text" placeholder="Type the word..." autocomplete="off" />
+<!-- MAIN GAME -->
+<div class="game-container hide">
 
-    <p>⏱ Time Left: <span id="time">12</span>s</p>
+  <h1>⚡ Typing Speed Challenge</h1>
+
+  <div class="info">
+    <p>⏱ Time: <span id="time">12</span></p>
     <p>🏆 Score: <span id="score">0</span></p>
+  </div>
 
-    <label>Difficulty:</label>
+  <h2 id="word"></h2>
+
+  <input id="text" type="text" placeholder="Type the word..." autofocus>
+
+  <div class="selectors">
     <select id="difficulty">
       <option value="easy">Easy</option>
-      <option value="medium">Medium</option>
+      <option value="medium" selected>Medium</option>
       <option value="hard">Hard</option>
     </select>
 
-    <button id="musicBtn">🎵 Play / Pause Music</button>
+    <select id="wordPack">
+      <option value="all">All Packs</option>
+      <option value="general">General</option>
+      <option value="cricket">Cricket 🏏</option>
+      <option value="food">Food 🍔</option>
+      <option value="gaming">Gaming 🎮</option>
+      <option value="anime">Anime 🎬</option>
+      <option value="hard">Hard English 🧠</option>
+    </select>
   </div>
+
+  <button id="musicBtn">🎵 Music</button>
+
+</div>
 
 <script src="script.js"></script>
 </body>
 </html>
+
